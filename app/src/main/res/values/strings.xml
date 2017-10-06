@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Konveksi</string>
+    <string name="app_login">LOGIN</string>
+
+    <array name="genre">
+        <item>laki</item>
+        <item>perempuan</item>
+    </array>
+</resources>

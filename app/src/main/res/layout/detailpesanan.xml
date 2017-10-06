@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_posting_pesanan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.siswa5129.kovenksi.ResponPesanan">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:text="Jaket Yondaime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:id="@+id/title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/jaket_yondaime" />
+
+            <TextView
+                android:text="Jenis Kain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/jenisKain"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:text=": Fleece"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/valJenisKain"
+                android:layout_below="@+id/image"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="110dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:text="Warna Kain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valJenisKain"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/warnaKain"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <TextView
+                android:text=": Putih dan Hitam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/valWarnaKain"
+                android:layout_below="@+id/valJenisKain"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="110dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:text="Variasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valWarnaKain"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/variasi"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <TextView
+                android:text=": -"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/valVariasi"
+                android:layout_below="@+id/valWarnaKain"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="110dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:text="Warna Variasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valVariasi"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/warnaVariasi"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <TextView
+                android:text=": -"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/valWarnaVariasi"
+                android:layout_below="@+id/valVariasi"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="110dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:text="Ukuran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valWarnaVariasi"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/ukuran"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <TextView
+                android:text=": M = 6, L = 12, XL = 2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/valUkuran"
+                android:layout_below="@+id/valWarnaVariasi"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="110dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:text="Bordir/Sablon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valUkuran"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/bordirSablon"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valUkuran"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="120dp"
+                android:id="@+id/img"
+                android:src="@drawable/yondaime"/>
+
+            <TextView
+                android:text="Tanggal Selesai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/tanggalSelesai"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <TextView
+                android:text=": 12/06/2017"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/valTanggalSelesai"
+                android:layout_below="@+id/img"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="110dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:text="Dana/Budget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valTanggalSelesai"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/danaBudget"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <TextView
+                android:text=": Rp 2500000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/valDanaBudget"
+                android:layout_below="@+id/valTanggalSelesai"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="110dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:text="Keterangan Tambahan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valDanaBudget"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/keteranganTambahan"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:layout_alignRight="@+id/warnaVariasi"
+                android:layout_alignEnd="@+id/warnaVariasi" />
+
+            <TextView
+                android:text=": -"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/valKeteranganTambahan"
+                android:layout_below="@+id/valDanaBudget"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="110dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="3dp"
+                android:background="#002aff"
+                android:layout_below="@+id/valKeteranganTambahan"
+                android:layout_marginTop="35dp"
+                />
+            <TextView
+                android:text="Respon Pesanan"
+                android:id="@+id/rp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#002aff"
+                android:layout_below="@+id/valKeteranganTambahan"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="10dp"
+                android:textSize="28dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <TextView
+                android:text="Keterangan Tambahan"
+                android:id="@+id/kt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_below="@+id/kt"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:id="@+id/valKT"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:inputType="text" />
+
+            <Button
+                android:text="Respon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/valKT"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="#4052b5"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:id="@+id/respon" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

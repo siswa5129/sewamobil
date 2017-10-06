@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1011601746361",
+    "firebase_url": "https://konveksi-4f4be.firebaseio.com",
+    "project_id": "konveksi-4f4be",
+    "storage_bucket": "konveksi-4f4be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011601746361:android:fde42b9b53d1d023",
+        "android_client_info": {
+          "package_name": "com.example.siswa5129.kovenksi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011601746361-kbgsndnb6k293oo5ul97re1f43ahnalq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.siswa5129.kovenksi",
+            "certificate_hash": "9bc120721c3b3069dbeb3ec71169537550c9a98c"
+          }
+        },
+        {
+          "client_id": "1011601746361-2i709ni5jd6mfp8pelokfr0r52pou9ju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIRmjdJSkkMVaaIr4welf7k9jVo1uKVWA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011601746361-2i709ni5jd6mfp8pelokfr0r52pou9ju.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

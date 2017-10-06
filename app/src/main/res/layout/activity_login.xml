@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:src="@drawable/login"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="MASUK"
+        android:layout_marginTop="160dp"
+        android:textAlignment="center"/>
+    <TextView
+        android:layout_marginTop="180dp"
+        android:id="@+id/textView"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:text="USERNAME" />
+
+    <EditText
+        android:layout_marginTop="220dp"
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#1029"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:layout_marginTop="270dp"
+        android:id="@+id/textView2"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:text="PASSWORD" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_marginTop="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:background="#1029"
+        android:inputType="textPassword" />
+    <TextView
+        android:layout_marginTop="350dp"
+        android:id="@+id/lupapassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Lupa Password" />
+
+    <Button
+        android:layout_marginLeft="130dp"
+        android:id="@+id/bt_signin"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="MASUK"
+        android:layout_below="@+id/lupapassword"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginStart="50dp" />
+
+
+    <Button
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="240dp"
+        android:id="@+id/btnBuatAkun"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="BUAT AKUN" />
+</RelativeLayout>
+

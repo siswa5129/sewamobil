@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.siswa5129.kovenksi.MenuUtama">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp">
+
+        <ImageButton
+            android:id="@+id/button_posting"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/posting"
+            android:layout_marginLeft="20dp"/>
+
+        <ImageButton
+            android:id="@+id/button_negosiasi"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:adjustViewBounds="true"
+            android:background="#ffffff"
+            android:src="@drawable/negosiasi"
+            android:visibility="visible"
+            android:layout_marginLeft="190dp" />
+
+        <ImageButton
+            android:id="@+id/button_perjanjian"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/perjanjian"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="170dp"
+            android:background="#ffffff" />
+
+
+        <ImageButton
+            android:id="@+id/button_bayar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="#ffffff"
+            android:src="@drawable/pembayaran"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="170dp"
+            />
+
+        <ImageButton
+            android:id="@+id/button_pesanansaya"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="#ffffff"
+            android:src="@drawable/pesanansaya"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="340dp"/>
+
+        <ImageButton
+            android:id="@+id/button_profil"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="#ffffff"
+            android:src="@drawable/profil"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="340dp"/>
+        <!--app:srcCompat="@drawable/btn_respon"-->
+
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

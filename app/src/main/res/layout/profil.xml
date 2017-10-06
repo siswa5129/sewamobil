@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:clickable="false"
+        android:text="Nama Konveksi" />
+
+    <EditText
+        android:id="@+id/namakonveksi"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:background="#1029"
+        android:ems="10" />
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:text="Nama"/>
+
+    <EditText
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:background="#1029"
+        android:ems="10"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:text="Username"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:background="#1029"
+        android:ems="10"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:text="Email"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:background="#1029"
+        android:ems="10"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:text="No Telp"/>
+
+    <EditText
+        android:id="@+id/notelp"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:background="#1029"
+        android:ems="10"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:text="Alamat Konveksi"/>
+
+    <EditText
+        android:id="@+id/alamatkonveksi"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:background="#1029"
+        android:ems="10"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:text="No NPWP" />
+
+    <EditText
+        android:id="@+id/nonpwp"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:background="#1029"
+        android:ems="10"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:text="No SIUP"/>
+
+    <EditText
+        android:id="@+id/nosiup"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:background="#1029"
+        android:ems="10"/>
+
+    <Button
+        android:id="@+id/btnDaftar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="DAFTAR" />
+
+</LinearLayout>

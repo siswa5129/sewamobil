@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_posting_pesanan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:text="Desain Pakaian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/desainPakaian"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:text="Nama Pesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/namaPesanan"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:layout_below="@+id/desainPakaian"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#fff"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/txtNamaPesanan"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/namaPesanan"
+                android:layout_alignStart="@+id/namaPesanan" />
+
+            <TextView
+                android:text="Jenis Kain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/jenisKain"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_below="@+id/txtNamaPesanan"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#fff"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/txtJenisKain"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:layout_below="@+id/jenisKain"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:text="Warna Kain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/warnaKain"
+                android:layout_below="@+id/txtJenisKain"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:background="#fff"
+                android:ems="10"
+                android:layout_below="@+id/warnaKain"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:id="@+id/txtnamaKain"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:inputType="text" />
+
+            <TextView
+                android:text="Variasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtnamaKain"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/variasi"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#fff"
+                android:ems="10"
+                android:id="@+id/txtVariasi"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:inputType="text"
+                android:layout_below="@+id/variasi"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:text="Warna Variasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtVariasi"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/warnaVariasi"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#fff"
+                android:ems="10"
+                android:layout_below="@+id/warnaVariasi"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:id="@+id/txtWarnaVariasi"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:inputType="text" />
+
+            <TextView
+                android:text="Ukuran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtWarnaVariasi"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/ukuran"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:background="#fff"
+                android:ems="10"
+                android:layout_below="@+id/ukuran"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:id="@+id/txtUkuran"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:inputType="text" />
+
+            <CheckBox
+                android:text="Sablon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/cbSablon"
+                android:layout_below="@+id/txtUkuran"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                />
+
+            <CheckBox
+                android:text="Bordir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/cbSablon"
+                android:layout_toRightOf="@+id/cbSablon"
+                android:layout_toEndOf="@+id/cbSablon"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="35dp" />
+
+            <TextView
+                android:text="Tanggal Selesai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cbSablon"
+                android:layout_marginTop="80dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/tanggalSelesai"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:background="#fff"
+                android:ems="10"
+                android:layout_below="@+id/tanggalSelesai"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:id="@+id/txtTanggalSelesai"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:inputType="date" />
+
+            <TextView
+                android:text="Dana/Budget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTanggalSelesai"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/danaBudget"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:background="#fff"
+                android:ems="10"
+                android:layout_below="@+id/danaBudget"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:id="@+id/txtDanaBudget"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:inputType="text" />
+
+            <TextView
+                android:text="Keterangan Tambahan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDanaBudget"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/keteranganTambahan"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:background="#fff"
+                android:ems="10"
+                android:id="@+id/txtKeteranganTambahan"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:inputType="text"
+                android:layout_below="@+id/keteranganTambahan"
+                android:layout_alignStart="@+id/keteranganTambahan" />
+
+            <Button
+                android:text="Daftar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtKeteranganTambahan"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="#4052b5"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:id="@+id/daftar" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
