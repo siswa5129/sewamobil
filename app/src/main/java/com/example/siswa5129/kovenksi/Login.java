@@ -22,7 +22,6 @@ public class Login extends AppCompatActivity {
     private EditText Email, Password;
 
     private FirebaseAuth fAuth;
-    private FirebaseAuth.AuthStateListener fStateListener;
 
     private static final String TAG = Login.class.getSimpleName();
 
@@ -38,27 +37,19 @@ public class Login extends AppCompatActivity {
 
         fAuth = FirebaseAuth.getInstance();
 
-        fStateListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
-                    Log.v(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                } else {
-                    Toast.makeText(Login.this, "User Logout\n",
-                            Toast.LENGTH_SHORT).show();
-                    //btSignOut.setEnabled(false);
-                    Log.v(TAG, "onAuthStateChanged:signed_out");
-                }
-            }
-
-        };
 
         Button btnmasuk = (Button) findViewById(R.id.bt_signin);
         btnmasuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signIn(Email.getText().toString(), Password.getText().toString());
+                if(Email.getText().toString() == null && Password.getText().toString() == null){
+                    Intent t2 = new Intent(getApplicationContext(),LoginEmail.class);
+                    startActivity(t2); ;
+                }
+                else {
+                    signIn(Email.getText().toString(), Password.getText().toString());
+                }
+
             }
         });
 

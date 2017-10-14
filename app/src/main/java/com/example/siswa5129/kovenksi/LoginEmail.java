@@ -37,10 +37,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-/**
- * Created by Herdi_WORK on 13.03.17.
- */
-
 public class LoginEmail extends AppCompatActivity {
 
     private Button btSignUp;
@@ -59,14 +55,8 @@ public class LoginEmail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        /**
-         * Inisialisasi Firebase Auth
-         */
         fAuth = FirebaseAuth.getInstance();
 
-        /**
-         * Cek apakah ada user yang sudah login
-         */
         fStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -94,9 +84,7 @@ public class LoginEmail extends AppCompatActivity {
         btSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /**
-                 * Lempar email dan password ketika tombol signup diklik
-                 */
+
                 signUp(etEmail.getText().toString(), etPassword.getText().toString());
             }
         });
