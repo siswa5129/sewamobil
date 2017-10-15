@@ -1,10 +1,12 @@
 package com.example.siswa5129.kovenksi.model;
 
+import com.example.siswa5129.kovenksi.Akun;
+
 /**
  * Created by siswa5129 on 9/30/2017.
  */
 
-public class AkunKonsumen {
+public class AkunKonsumen extends Akun{
     String idkonsumen;
     String namakonsumen;
     String emailkonsumen;
@@ -19,30 +21,6 @@ public class AkunKonsumen {
         this.passwordkonsumen = passwordkonsumen;
         this.notelpkonsumen = notelpkonsumen;
         this.alamat = alamat;
-    }
-
-    public String getIdkonsumen() {
-        return idkonsumen;
-    }
-
-    public String getNamakonsumen() {
-        return namakonsumen;
-    }
-
-    public String getEmailkonsumen() {
-        return emailkonsumen;
-    }
-
-    public String getPasswordkonsumen() {
-        return passwordkonsumen;
-    }
-
-    public String getNotelpkonsumen() {
-        return notelpkonsumen;
-    }
-
-    public String getAlamat() {
-        return alamat;
     }
 }
 

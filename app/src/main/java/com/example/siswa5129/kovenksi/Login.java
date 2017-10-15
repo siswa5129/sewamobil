@@ -57,14 +57,14 @@ public class Login extends AppCompatActivity {
         btndaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent t2 = new Intent(getApplicationContext(),LoginEmail.class);
+                Intent t2 = new Intent(getApplicationContext(),Akun.class);
                 startActivity(t2);
             }
         });
 
 
     }
-    private void signIn(final String email, String password){
+    public void signIn(final String email, String password){
 
 
         fAuth.signInWithEmailAndPassword(email, password)

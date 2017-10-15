@@ -1,10 +1,12 @@
 package com.example.siswa5129.kovenksi.model;
 
+import com.example.siswa5129.kovenksi.Akun;
+
 /**
  * Created by siswa5129 on 9/30/2017.
  */
 
-public class AkunKonveksi {
+public class AkunKonveksi extends Akun{
     String id;
     String nama;
     String namakonveksi;
