@@ -22,6 +22,7 @@ public class DataPosting extends Posting{
         this.keterangan = keterangan;
     }
 
+
     public String getId() {
         return id;
     }

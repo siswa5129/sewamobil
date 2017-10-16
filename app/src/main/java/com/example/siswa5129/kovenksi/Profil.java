@@ -1,19 +1,26 @@
 package com.example.siswa5129.kovenksi;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+
 
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
-
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Profil extends AppCompatActivity {
     TextView tv,tv2,tv3,tv4,tv5,tv6,tv7,tv8;
-
     Firebase fb,fb2,fb3,fb4,fb5,fb6,fb7,fb8;
+    private FirebaseAuth fAuth;
 
     String s,s2,s3,s4,s5,s6,s7,s8;
 
@@ -23,7 +30,7 @@ public class Profil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profil);
         Firebase.setAndroidContext(this);
-
+        fAuth = FirebaseAuth.getInstance();
         s = "namakonveksi";
         s2 = "nama";
         s3 = "username";
@@ -146,6 +153,29 @@ public class Profil extends AppCompatActivity {
 
             }
         });
+        checkLogin();
+        Button btnklr = (Button) findViewById(R.id.btnKeluar);
+        btnklr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signOut();
+                Intent t2 = new Intent(getApplicationContext(),Login.class);
+                startActivity(t2);
+            }
+        });
+    }
+
+
+    private void checkLogin(){
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            String email = user.getEmail();
+            String uid = user.getUid();
+            //btnklr.setEnabled(true);
+        }
+    }
+    private void signOut(){
+        fAuth.signOut();
     }
 
 }

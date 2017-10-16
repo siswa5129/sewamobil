@@ -106,9 +106,9 @@
         android:ems="10"/>
 
     <Button
-        android:id="@+id/btnDaftar"
+        android:id="@+id/btnKeluar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="DAFTAR" />
+        android:text="KELUAR" />
 
 </LinearLayout>

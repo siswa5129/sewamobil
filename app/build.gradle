@@ -50,6 +50,8 @@ dependencies {
     compile 'com.firebase:firebase-client-android:2.4.0'
 
     testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support.test:rules:0.5'
 }
 
 
