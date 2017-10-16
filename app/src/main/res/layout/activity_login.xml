@@ -15,12 +15,13 @@
         android:text="MASUK"
         android:layout_marginTop="160dp"
         android:textAlignment="center"/>
+
     <TextView
-        android:layout_marginTop="180dp"
         android:id="@+id/textView"
         android:layout_width="80dp"
         android:layout_height="20dp"
-        android:text="USERNAME" />
+        android:layout_marginTop="180dp"
+        android:text="EMAIL" />
 
     <EditText
         android:layout_marginTop="220dp"
