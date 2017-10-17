@@ -13,20 +13,24 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+
+
 public class Akun extends AppCompatActivity {
 
     private EditText Email, Password;
 
-    private EditText etEmail;
-    private EditText etPassword;
+    private EditText ettEmail;
+    private EditText ettPassword;
     private FirebaseAuth fAuth;
     private static final String TAG = Akun.class.getSimpleName();
 
@@ -34,12 +38,10 @@ public class Akun extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        getSupportActionBar().setTitle("Logintesting");
+        getSupportActionBar().setTitle("Login");
 
         Email = (EditText) findViewById(R.id.et_email);
         Password = (EditText) findViewById(R.id.et_password);
-
         fAuth = FirebaseAuth.getInstance();
 
         Button btnmasuk = (Button) findViewById(R.id.bt_signin);
@@ -50,7 +52,6 @@ public class Akun extends AppCompatActivity {
                 if(!validate()){
                     signIn(Email.getText().toString(), Password.getText().toString());
                 }
-
             }
         });
 
@@ -58,14 +59,19 @@ public class Akun extends AppCompatActivity {
         btndaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                getSupportActionBar().setTitle("Pendaftaran");
                 setContentView(R.layout.login);
                 Button btndaftar2 = (Button) findViewById(R.id.bt_signup);
                 btndaftar2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        etEmail = (EditText) findViewById(R.id.et_email);
-                        etPassword = (EditText) findViewById(R.id.et_password);
-                        signUp(etEmail.getText().toString(), etPassword.getText().toString());
+                        ettEmail = (EditText) findViewById(R.id.ett_email);
+                        ettPassword = (EditText) findViewById(R.id.ett_password);
+                        if(!validatedaftar()) {
+                            signUp(ettEmail.getText().toString(), ettPassword.getText().toString());
+                        }
+                        //Intent t1 = new Intent(getApplicationContext(),Pendaftaran.class);
+                        //startActivity(t1);
                     }
                 });
             }
@@ -75,14 +81,25 @@ public class Akun extends AppCompatActivity {
     }
     private boolean validate(){
         if(Email.getText().toString().trim().length() <= 0){
-            Toast.makeText(Akun.this, "Masukkan email", Toast.LENGTH_LONG).show();
+            Email.setError("Masukkan Email");
             return true;
         }else if(Password.getText().toString().trim().length() <= 0){
-            Toast.makeText(Akun.this, "Masukkan Password", Toast.LENGTH_LONG).show();
+            Password.setError("Masukkan Password");
             return true;
         }else
         return false;
     }
+    private boolean validatedaftar(){
+        if(ettEmail.getText().toString().trim().length() <= 0){
+            ettEmail.setError("Masukkan Email");
+            return true;
+        }else if(ettPassword.getText().toString().trim().length() <= 0){
+            ettPassword.setError("Masukkan Password");
+            return true;
+        }else
+            return false;
+    }
+
     public void signUp(final String email, String password){
         fAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -90,39 +107,28 @@ public class Akun extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
                         if (!task.isSuccessful()) {
-                            task.getException().printStackTrace();
-                            Toast.makeText(Akun.this, "Proses Pendaftaran Gagal",
-                                    Toast.LENGTH_SHORT).show();
+                            ettPassword.setError("Daftar Gagal");
                         } else {
-                            Toast.makeText(Akun.this, "Proses Pendaftaran Berhasil\n" +
-                                            "Email "+email,
-                                    Toast.LENGTH_SHORT).show();
                             Intent t2 = new Intent(getApplicationContext(),Pendaftaran.class);
                             startActivity(t2);
+                            ettPassword.setError("Daftar Berhasil");
                         }
                     }
                 });
     }
-    private void signIn(final String email, String password){
+    public void signIn(final String email, String password){
         fAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
                         if (!task.isSuccessful()) {
-                            Log.w(TAG, "signInWithEmail:failed", task.getException());
-                            Toast.makeText(Akun.this, "Proses Login Gagal\n",
-                                    Toast.LENGTH_SHORT).show();
+                            Password.setError("Login Gagal");
                         } else{
                             Intent t1 = new Intent(getApplicationContext(),MenuUtama.class);
                             startActivity(t1);
-                            //setContentView(R.layout.activity_login);
-                            Toast.makeText(Akun.this, "Login Berhasil\n" +
-                                            "Email "+email,
-                                    Toast.LENGTH_SHORT).show();
+                            Password.setError("Login Berhasil");
                         }
                     }
                 });
     }
-
 }

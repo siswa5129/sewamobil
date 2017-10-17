@@ -14,9 +14,7 @@ import android.widget.Button;
 public class Pembayaran extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.responpesanan);
-
-
+        setContentView(R.layout.pembayaran);
     }
 
 

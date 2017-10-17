@@ -44,7 +44,7 @@ public class Posting extends AppCompatActivity{
         ton111.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
                 tambah();
-                Intent t2 = new Intent(getApplicationContext(),Login.class);
+                Intent t2 = new Intent(getApplicationContext(),Akun.class);
                 startActivity(t2);
             }
         });

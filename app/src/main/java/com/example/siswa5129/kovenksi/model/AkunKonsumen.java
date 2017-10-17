@@ -23,4 +23,3 @@ public class AkunKonsumen extends Akun{
         this.alamat = alamat;
     }
 }
-

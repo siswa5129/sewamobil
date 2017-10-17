@@ -159,7 +159,7 @@ public class Profil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 signOut();
-                Intent t2 = new Intent(getApplicationContext(),Login.class);
+                Intent t2 = new Intent(getApplicationContext(),Akun.class);
                 startActivity(t2);
             }
         });
