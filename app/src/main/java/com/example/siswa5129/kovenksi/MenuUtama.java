@@ -14,7 +14,8 @@ import android.widget.ImageButton;
 public class MenuUtama extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menukonveksi);
+        setContentView(R.layout.menukosumen);
+        setTitle("MenuKonsumen");
 
 
 
@@ -54,7 +55,7 @@ public class MenuUtama extends AppCompatActivity {
             }
         });
 
-        ImageButton btncari = (ImageButton) findViewById(R.id.button_cari);
+        ImageButton btncari = (ImageButton) findViewById(R.id.button_posting);
         btncari.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,7 +64,7 @@ public class MenuUtama extends AppCompatActivity {
             }
         });
 
-        ImageButton btnrespon = (ImageButton) findViewById(R.id.button_respon);
+        ImageButton btnrespon = (ImageButton) findViewById(R.id.button_pesanansaya);
         btnrespon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

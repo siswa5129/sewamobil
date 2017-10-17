@@ -24,38 +24,29 @@ public class Profil extends AppCompatActivity {
 
     String s,s2,s3,s4,s5,s6,s7,s8;
 
-    String key = "-KvG7NOSlfn6wscQ4AtJ";
+    String key = "-KvQ2nCGMUFqxBVIgHMq";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profil);
         Firebase.setAndroidContext(this);
         fAuth = FirebaseAuth.getInstance();
-        s = "namakonveksi";
-        s2 = "nama";
-        s3 = "username";
-        s4 = "email";
-        s5 = "notelp";
-        s6 = "alamatkonveksi";
-        s7 = "nonpwp";
-        s8 = "nosiup";
+        s = "namakonsumen";
+        s2 = "emailkonsumen";
+        s3 = "passwordkonsumen";
+        s4 = "notelpkonsumen";
+        s5 = "alamat";
 
-        fb = new Firebase("https://konveksi-4f4be.firebaseio.com/konveksi/-KvG7NOSlfn6wscQ4AtJ/"+s);
-        fb2 = new Firebase("https://konveksi-4f4be.firebaseio.com/konveksi/-KvG7NOSlfn6wscQ4AtJ/"+s2);
-        fb3 = new Firebase("https://konveksi-4f4be.firebaseio.com/konveksi/-KvG7NOSlfn6wscQ4AtJ/"+s3);
-        fb4 = new Firebase("https://konveksi-4f4be.firebaseio.com/konveksi/-KvG7NOSlfn6wscQ4AtJ/"+s4);
-        fb5 = new Firebase("https://konveksi-4f4be.firebaseio.com/konveksi/-KvG7NOSlfn6wscQ4AtJ/"+s5);
-        fb6 = new Firebase("https://konveksi-4f4be.firebaseio.com/konveksi/-KvG7NOSlfn6wscQ4AtJ/"+s6);
-        fb7 = new Firebase("https://konveksi-4f4be.firebaseio.com/konveksi/-KvG7NOSlfn6wscQ4AtJ/"+s7);
-        fb8 = new Firebase("https://konveksi-4f4be.firebaseio.com/konveksi/-KvG7NOSlfn6wscQ4AtJ/"+s8);
-        tv = (TextView) findViewById(R.id.namakonveksi);
-        tv2 = (TextView) findViewById(R.id.nama);
-        tv3 = (TextView) findViewById(R.id.username);
-        tv4 = (TextView) findViewById(R.id.email);
-        tv5 = (TextView) findViewById(R.id.notelp);
-        tv6 = (TextView) findViewById(R.id.alamatkonveksi);
-        tv7 = (TextView) findViewById(R.id.nonpwp);
-        tv8 = (TextView) findViewById(R.id.nosiup);
+        fb = new Firebase("https://konveksi-4f4be.firebaseio.com/akunkonsumen/"+ key +"/"+s);
+        fb2 = new Firebase("https://konveksi-4f4be.firebaseio.com/akunkonsumen/"+ key +"/"+s2);
+        fb3 = new Firebase("https://konveksi-4f4be.firebaseio.com/akunkonsumen/"+ key +"/"+s3);
+        fb4 = new Firebase("https://konveksi-4f4be.firebaseio.com/akunkonsumen/"+ key +"/"+s4);
+        fb5 = new Firebase("https://konveksi-4f4be.firebaseio.com/akunkonsumen/"+ key +"/"+s5);
+        tv = (TextView) findViewById(R.id.namakonsumen);
+        tv2 = (TextView) findViewById(R.id.emailkonsumen);
+        tv3 = (TextView) findViewById(R.id.passwordkonsumen);
+        tv4 = (TextView) findViewById(R.id.notelpkonsumen);
+        tv5 = (TextView) findViewById(R.id.alamatkonsumen);
 
         fb.addValueEventListener(new ValueEventListener() {
             @Override
@@ -110,42 +101,6 @@ public class Profil extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String value = dataSnapshot.getValue(String.class);
                 tv5.setText(value);
-            }
-
-            @Override
-            public void onCancelled(FirebaseError firebaseError) {
-
-            }
-        });
-        fb6.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String value2 = dataSnapshot.getValue(String.class);
-                tv6.setText(value2);
-            }
-
-            @Override
-            public void onCancelled(FirebaseError firebaseError) {
-
-            }
-        });
-        fb7.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                tv7.setText(value);
-            }
-
-            @Override
-            public void onCancelled(FirebaseError firebaseError) {
-
-            }
-        });
-        fb8.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String value2 = dataSnapshot.getValue(String.class);
-                tv8.setText(value2);
             }
 
             @Override
