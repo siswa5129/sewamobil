@@ -86,13 +86,7 @@ public class AkunTest {
         onView(withId(R.id.pesan)).check(withText("Login Berhasil"));
     }*/
 
-    @Test
-    public void ceklogingagal() {
-        Akun tester = new Akun();
 
-        //assertEquals("Result", result, tester.signIn("firman@gmail.com", "1234567890"););
-
-    }
 
 
 
