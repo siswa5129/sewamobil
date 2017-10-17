@@ -27,6 +27,7 @@ import static org.junit.Assert.*;
  */
 @RunWith(JUnit4.class)
 public class PendaftaranTest {
+
     @Rule
     public ActivityTestRule<Pendaftaran> daftartestrule = new ActivityTestRule<>(Pendaftaran.class, true, false);
 
@@ -93,18 +94,7 @@ public class PendaftaranTest {
         onView(withId(R.id.alamatkonsumen)).check(matches(hasErrorText("Mohon Diisi")));
     }
 
-    @Test
-    public void cektambah() {
 
-    }
-
-
-
-
-    @Test
-    public void onCreate() throws Exception {
-
-    }
 
 
 }
