@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 /**
@@ -68,7 +67,7 @@ public class MenuUtama extends AppCompatActivity {
         btnrespon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent t6 = new Intent(getApplicationContext(),ResponPesanan.class);
+                Intent t6 = new Intent(getApplicationContext(),Pesanan.class);
                 startActivity(t6);
             }
         });

@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
  * Created by siswa5129 on 9/28/2017.
  */
 
-public class ResponPesanan extends AppCompatActivity {
+public class Pesanan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.responpesanan);

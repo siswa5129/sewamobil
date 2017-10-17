@@ -1,26 +1,16 @@
 package com.example.siswa5129.kovenksi;
 
-import android.content.ComponentName;
-import android.content.Intent;
 import android.support.test.espresso.intent.Intents;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
-import android.support.test.rule.ActivityTestRule;
-import android.view.View;
 
-import org.hamcrest.Matcher;
 import org.junit.Test;
 
-import static android.support.test.InstrumentationRegistry.getTargetContext;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
-import static android.support.test.espresso.action.ViewActions.typeText;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static android.support.test.espresso.matcher.ViewMatchers.hasErrorText;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static org.junit.Assert.*;
 
 /**
  * Created by siswa5129 on 10/16/2017.
@@ -42,7 +32,7 @@ public class MenuUtamaTest {
     @Test
     public void testMenuPosting()throws Exception{
         testintent.launchActivity(null);
-        onView(withId(R.id.button_cari)).perform(click());
+        onView(withId(R.id.button_posting)).perform(click());
         pauseTestFor(500);
         intended(hasComponent(Posting.class.getName()));
         Intents.release();
@@ -87,9 +77,9 @@ public class MenuUtamaTest {
     @Test
     public void testMenuRespon()throws Exception{
         testintent.launchActivity(null);
-        onView(withId(R.id.button_respon)).perform(click());
+        onView(withId(R.id.button_pesanansaya)).perform(click());
         pauseTestFor(500);
-        intended(hasComponent(ResponPesanan.class.getName()));
+        intended(hasComponent(Pesanan.class.getName()));
         Intents.release();
     }
 

@@ -67,15 +67,9 @@ public class Pendaftaran extends AppCompatActivity{
         String passwordkonsumen = password.getText().toString().trim();
         String notelpkonsumen = notelp.getText().toString().trim();
         String alamatkonsumen = alamat.getText().toString().trim();
-        if(!TextUtils.isEmpty(namakonsumen)){
             String id = databaseReference.push().getKey();
             AkunKonsumen akunkonsumen = new AkunKonsumen(id, namakonsumen, emailkonsumen, passwordkonsumen, notelpkonsumen, alamatkonsumen);
             databaseReference.child(namakonsumen).setValue(akunkonsumen);
-            Toast.makeText(this, "Pendaftaran Berhasil", Toast.LENGTH_LONG).show();
-        }
-        else{
-            Toast.makeText(this, "Isian Kurang Lengkap", Toast.LENGTH_LONG).show();
-        }
         return namakonsumen;
     }
 
