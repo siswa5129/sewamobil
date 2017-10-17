@@ -70,6 +70,7 @@ public class Pendaftaran extends AppCompatActivity{
             String id = databaseReference.push().getKey();
             AkunKonsumen akunkonsumen = new AkunKonsumen(id, namakonsumen, emailkonsumen, passwordkonsumen, notelpkonsumen, alamatkonsumen);
             databaseReference.child(namakonsumen).setValue(akunkonsumen);
+
         return namakonsumen;
     }
 

@@ -43,12 +43,13 @@ public class Posting extends AppCompatActivity{
 
         ton111.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view){
-                tambah();
+                //tambah();
                 Intent t2 = new Intent(getApplicationContext(),Akun.class);
                 startActivity(t2);
             }
         });
     }
+    /*
     private void tambah(){
         String namapesanan  = text111.getText().toString().trim();
         String jenis = text112.getText().toString().trim();
@@ -63,10 +64,9 @@ public class Posting extends AppCompatActivity{
             String id = databaseReference.push().getKey();
             DataPosting posting = new DataPosting(id, namapesanan, jenis, warna, variasi, warnavariasi, ukuran, tanggalselesai, dana, keterangan);
             databaseReference.child(namapesanan).setValue(posting);
-            Toast.makeText(this, "DataPosting Berhasil", Toast.LENGTH_LONG).show();
+
         }
         else{
-            Toast.makeText(this, "Isian DataPosting Kurang Lengkap", Toast.LENGTH_LONG).show();
         }
-    }
+    }*/
 }

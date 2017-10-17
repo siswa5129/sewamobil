@@ -1,5 +1,7 @@
 package com.example.siswa5129.kovenksi;
 
+import android.support.test.espresso.intent.Intents;
+import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.rule.ActivityTestRule;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +20,8 @@ import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.intent.Intents.intended;
+import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static android.support.test.espresso.matcher.ViewMatchers.hasErrorText;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static org.junit.Assert.*;
@@ -30,6 +34,7 @@ public class PendaftaranTest {
 
     @Rule
     public ActivityTestRule<Pendaftaran> daftartestrule = new ActivityTestRule<>(Pendaftaran.class, true, false);
+    public IntentsTestRule<Pendaftaran> daftarintent = new IntentsTestRule<>(Pendaftaran.class, true, false);
 
     private void pauseTestFor(long milliseconds) {
         try {
@@ -93,6 +98,24 @@ public class PendaftaranTest {
         pauseTestFor(500);
         onView(withId(R.id.alamatkonsumen)).check(matches(hasErrorText("Mohon Diisi")));
     }
+/*
+    @Test
+    public void cekintent() {
+        daftartestrule.launchActivity(null);
+        onView(withId(R.id.namakonsumen)).perform(typeText("firman"),closeSoftKeyboard());
+        onView(withId(R.id.emailkonsumen)).perform(typeText("firman"),closeSoftKeyboard());
+        onView(withId(R.id.passwordkonsumen)).perform(typeText("123456"),closeSoftKeyboard());
+        onView(withId(R.id.notelpkonsumen)).perform(typeText("411329"),closeSoftKeyboard());
+        onView(withId(R.id.alamatkonsumen)).perform(typeText("kalipuro"),closeSoftKeyboard());
+        daftarintent.launchActivity(null);
+        onView(withId(R.id.btnDaftarkonsumen)).perform(click());
+        intended(hasComponent(Akun.class.getName()));
+        Intents.release();
+    }*/
+
+
+
+
 
 
 
