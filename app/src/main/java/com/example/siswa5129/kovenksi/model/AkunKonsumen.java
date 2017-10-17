@@ -6,7 +6,7 @@ import com.example.siswa5129.kovenksi.Akun;
  * Created by siswa5129 on 9/30/2017.
  */
 
-public class AkunKonsumen extends Akun{
+public class AkunKonsumen{
     String idkonsumen;
     String namakonsumen;
     String emailkonsumen;

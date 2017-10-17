@@ -1,114 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="22dp"
-        android:clickable="false"
-        android:text="Nama Konveksi" />
-
-    <EditText
-        android:id="@+id/namakonveksi"
-        android:layout_width="match_parent"
-        android:layout_height="22dp"
-        android:background="#1029"
-        android:ems="10" />
-
     <TextView
 
         android:layout_width="match_parent"
         android:layout_height="22dp"
-        android:text="Nama"/>
+        android:text="Nama Lengkap"
+        android:id="@+id/textView5" />
 
     <EditText
-        android:id="@+id/nama"
+        android:id="@+id/namakonsumen"
         android:layout_width="match_parent"
         android:layout_height="22dp"
         android:background="#1029"
+        android:ems="10"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="22dp"
+        android:text="gmail.com"
+        android:layout_below="@+id/textView7"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/emailkonsumen"
+        android:inputType="text"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:background="#1029"
+        android:ems="10"
+        android:layout_marginTop="66dp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_marginTop="44dp"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:text="Email"
+        android:id="@+id/textView7" />
+
+    <TextView
+        android:layout_marginTop="88dp"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:text="Password"/>
+
+
+    <EditText
+        android:layout_marginTop="110dp"
+        android:id="@+id/passwordkonsumen"
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:background="#1029"
+        android:inputType="textPassword"
         android:ems="10"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="22dp"
-        android:text="Username"/>
-
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="22dp"
-        android:background="#1029"
-        android:ems="10"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="22dp"
-        android:text="Email"/>
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="22dp"
-        android:background="#1029"
-        android:ems="10"/>
-
-    <TextView
+        android:layout_marginTop="132dp"
         android:layout_width="match_parent"
         android:layout_height="22dp"
         android:text="No Telp"/>
 
     <EditText
-        android:id="@+id/notelp"
+        android:layout_marginTop="152dp"
+        android:id="@+id/notelpkonsumen"
         android:layout_width="match_parent"
         android:layout_height="22dp"
         android:background="#1029"
         android:ems="10"/>
 
     <TextView
+        android:layout_marginTop="174dp"
         android:layout_width="match_parent"
         android:layout_height="22dp"
-        android:text="Alamat Konveksi"/>
+        android:text="Alamat" />
 
     <EditText
-        android:id="@+id/alamatkonveksi"
+        android:id="@+id/alamatkonsumen"
         android:layout_width="match_parent"
         android:layout_height="22dp"
         android:background="#1029"
-        android:ems="10"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="22dp"
-        android:text="No NPWP" />
-
-    <EditText
-        android:id="@+id/nonpwp"
-        android:layout_width="match_parent"
-        android:layout_height="22dp"
-        android:background="#1029"
-        android:ems="10"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="22dp"
-        android:text="No SIUP"/>
-
-    <EditText
-        android:id="@+id/nosiup"
-        android:layout_width="match_parent"
-        android:layout_height="22dp"
-        android:background="#1029"
-        android:ems="10"/>
+        android:ems="10"
+        android:layout_marginTop="192dp" />
 
     <Button
+        android:layout_marginTop="220dp"
         android:id="@+id/btnKeluar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="KELUAR" />
-
-</LinearLayout>
+</RelativeLayout>
