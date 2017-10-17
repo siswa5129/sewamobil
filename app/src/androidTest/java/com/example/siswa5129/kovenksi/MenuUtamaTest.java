@@ -27,7 +27,7 @@ import static org.junit.Assert.*;
  */
 public class MenuUtamaTest {
 
-    //public ActivityTestRule<MenuUtama> menutestrule = new ActivityTestRule<>(MenuUtama.class, true, false);
+
 
     public IntentsTestRule<MenuUtama> testintent = new IntentsTestRule<>(MenuUtama.class, true, false);
 
