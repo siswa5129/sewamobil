@@ -1,4 +1,4 @@
-package com.example.siswa5129.kovenksi;
+package com.example.siswa5129.sewamobil;
 
 import android.support.test.rule.ActivityTestRule;
 
@@ -10,10 +10,8 @@ import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static android.support.test.espresso.action.ViewActions.typeText;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.hasErrorText;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static org.junit.Assert.*;
 
 /**
  * Created by siswa5129 on 10/18/2017.

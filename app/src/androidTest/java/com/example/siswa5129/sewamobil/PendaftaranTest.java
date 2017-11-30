@@ -1,19 +1,12 @@
-package com.example.siswa5129.kovenksi;
+package com.example.siswa5129.sewamobil;
 
-import android.support.test.espresso.intent.Intents;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.rule.ActivityTestRule;
-import android.widget.Button;
-import android.widget.EditText;
-
-import com.example.siswa5129.kovenksi.model.AkunKonsumen;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-
-import java.lang.reflect.Array;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -24,7 +17,6 @@ import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static android.support.test.espresso.matcher.ViewMatchers.hasErrorText;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static org.junit.Assert.*;
 
 /**
  * Created by siswa5129 on 10/17/2017.

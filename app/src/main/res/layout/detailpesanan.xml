@@ -4,7 +4,7 @@
     android:id="@+id/activity_posting_pesanan"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.siswa5129.kovenksi.Pesanan">
+    tools:context="com.example.siswa5129.sewamobil.com.example.siswa5129.sewamobil.Pesanan">
 
     <ScrollView
         android:layout_width="match_parent"

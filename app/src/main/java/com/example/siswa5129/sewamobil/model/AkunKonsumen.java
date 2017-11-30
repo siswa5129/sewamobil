@@ -1,6 +1,4 @@
-package com.example.siswa5129.kovenksi.model;
-
-import com.example.siswa5129.kovenksi.Akun;
+package com.example.siswa5129.sewamobil.model;
 
 /**
  * Created by siswa5129 on 9/30/2017.

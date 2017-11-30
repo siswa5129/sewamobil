@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.siswa5129.kovenksi">
+    package="com.example.siswa5129.sewamobil">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Akun">
+        <activity android:name="com.example.siswa5129.sewamobil.Akun">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,35 +19,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MenuUtama"
+            android:name="com.example.siswa5129.sewamobil.StatusPeminjaman"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Pembayaran"
+            android:name="com.example.siswa5129.sewamobil.Profil"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Profil"
+            android:name="com.example.siswa5129.sewamobil.Sewa"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Posting"
+            android:name="com.example.siswa5129.sewamobil.Pendaftaran"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Pendaftaran"
+            android:name="com.example.siswa5129.sewamobil.Supir"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Perjanjian"
+            android:name="com.example.siswa5129.sewamobil.Mobil"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Negosiasi"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".Pesanan"
+            android:name="com.example.siswa5129.sewamobil.HistorySewa"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
     </application>

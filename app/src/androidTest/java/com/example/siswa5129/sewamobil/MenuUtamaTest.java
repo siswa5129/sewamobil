@@ -1,4 +1,4 @@
-package com.example.siswa5129.kovenksi;
+package com.example.siswa5129.sewamobil;
 
 import android.support.test.espresso.intent.Intents;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
@@ -34,7 +34,7 @@ public class MenuUtamaTest {
         testintent.launchActivity(null);
         onView(withId(R.id.button_posting)).perform(click());
         pauseTestFor(500);
-        intended(hasComponent(Posting.class.getName()));
+        intended(hasComponent(Sewa.class.getName()));
         Intents.release();
     }
 
@@ -52,7 +52,7 @@ public class MenuUtamaTest {
         testintent.launchActivity(null);
         onView(withId(R.id.button_perjanjian)).perform(click());
         pauseTestFor(500);
-        intended(hasComponent(Perjanjian.class.getName()));
+        intended(hasComponent(Supir.class.getName()));
         Intents.release();
     }
 
@@ -61,7 +61,7 @@ public class MenuUtamaTest {
         testintent.launchActivity(null);
         onView(withId(R.id.button_negosiasi)).perform(click());
         pauseTestFor(500);
-        intended(hasComponent(Negosiasi.class.getName()));
+        intended(hasComponent(Mobil.class.getName()));
         Intents.release();
     }
 
@@ -70,7 +70,7 @@ public class MenuUtamaTest {
         testintent.launchActivity(null);
         onView(withId(R.id.button_bayar)).perform(click());
         pauseTestFor(500);
-        intended(hasComponent(Pembayaran.class.getName()));
+        intended(hasComponent(StatusPeminjaman.class.getName()));
         Intents.release();
     }
 
@@ -79,7 +79,7 @@ public class MenuUtamaTest {
         testintent.launchActivity(null);
         onView(withId(R.id.button_pesanansaya)).perform(click());
         pauseTestFor(500);
-        intended(hasComponent(Pesanan.class.getName()));
+        intended(hasComponent(HistorySewa.class.getName()));
         Intents.release();
     }
 

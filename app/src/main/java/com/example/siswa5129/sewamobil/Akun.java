@@ -1,4 +1,4 @@
-package com.example.siswa5129.kovenksi;
+package com.example.siswa5129.sewamobil;
 
 /**
  * Created by siswa5129 on 10/1/2017.
@@ -7,22 +7,17 @@ package com.example.siswa5129.kovenksi;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.ImageButton;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
 
 
 public class Akun extends AppCompatActivity {
@@ -49,7 +44,7 @@ public class Akun extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //setContentView(R.layout.login);
-                if(!validate()){
+                if(!validatelogin()){
                     signIn(Email.getText().toString(), Password.getText().toString());
                 }
             }
@@ -70,16 +65,13 @@ public class Akun extends AppCompatActivity {
                         if(!validatedaftar()) {
                             signUp(ettEmail.getText().toString(), ettPassword.getText().toString());
                         }
-                        //Intent t1 = new Intent(getApplicationContext(),Pendaftaran.class);
-                        //startActivity(t1);
                     }
                 });
             }
         });
 
-
     }
-    private boolean validate(){
+    private boolean validatelogin(){
         if(Email.getText().toString().trim().length() <= 0){
             Email.setError("Masukkan Email");
             return true;
@@ -124,9 +116,67 @@ public class Akun extends AppCompatActivity {
                         if (!task.isSuccessful()) {
                             Password.setError("Login Gagal");
                         } else{
-                            Intent t1 = new Intent(getApplicationContext(),MenuUtama.class);
-                            startActivity(t1);
-                            Password.setError("Login Berhasil");
+                            setContentView(R.layout.menukosumen);
+                            setTitle("MenuKonsumen");
+
+
+
+                            ImageButton btnnegosiasi = (ImageButton) findViewById(R.id.button_negosiasi);
+                            btnnegosiasi.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent t1 = new Intent(getApplicationContext(),Mobil.class);
+                                    startActivity(t1);
+                                }
+                            });
+
+                            ImageButton btnbayar = (ImageButton) findViewById(R.id.button_bayar);
+                            btnbayar.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent t2 = new Intent(getApplicationContext(),StatusPeminjaman.class);
+                                    startActivity(t2);
+                                }
+                            });
+
+                            ImageButton btnposting = (ImageButton) findViewById(R.id.button_perjanjian);
+                            btnposting.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent t3 = new Intent(getApplicationContext(),Supir.class);
+                                    startActivity(t3);
+                                }
+                            });
+
+                            ImageButton btnprofil = (ImageButton) findViewById(R.id.button_profil);
+                            btnprofil.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent t4 = new Intent(getApplicationContext(),Profil.class);
+                                    startActivity(t4);
+                                }
+                            });
+
+                            ImageButton btncari = (ImageButton) findViewById(R.id.button_posting);
+                            btncari.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent t5 = new Intent(getApplicationContext(),Sewa.class);
+                                    startActivity(t5);
+                                }
+                            });
+
+                            ImageButton btnrespon = (ImageButton) findViewById(R.id.button_pesanansaya);
+                            btnrespon.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent t6 = new Intent(getApplicationContext(),HistorySewa.class);
+                                    startActivity(t6);
+                                }
+                            });
+                            //Intent t1 = new Intent(getApplicationContext(),MenuUtama.class);
+                            //startActivity(t1);
+                            //Password.setError("Login Berhasil");
                         }
                     }
                 });

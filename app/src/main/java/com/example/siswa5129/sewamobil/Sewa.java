@@ -1,16 +1,12 @@
-package com.example.siswa5129.kovenksi;
+package com.example.siswa5129.sewamobil;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.example.siswa5129.kovenksi.model.DataPosting;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -18,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
  * Created by siswa5129 on 9/28/2017.
  */
 
-public class Posting extends AppCompatActivity{
+public class Sewa extends AppCompatActivity{
 
     Button ton111;
     EditText text111, text112, text113, text114, text115,text116, text117, text118, text119;

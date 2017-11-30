@@ -1,18 +1,10 @@
-package com.example.siswa5129.kovenksi;
+package com.example.siswa5129.sewamobil;
 
-import android.support.test.espresso.intent.Intents;
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.rule.ActivityTestRule;
-import android.test.suitebuilder.annotation.LargeTest;
-import android.view.Menu;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
 
-import org.hamcrest.Matcher;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.internal.TextListener;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
@@ -24,7 +16,6 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static android.support.test.espresso.matcher.ViewMatchers.hasErrorText;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static junit.framework.Assert.assertEquals;
